@@ -11,14 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'PagesController@getHome');
 
-Route::get('/addCategory', function () {
-    return view('addCategory');
-});
+Route::get('./', 'PagessController@getHome');
 
-Route::get('/viewCategories', function () {
-    return view('viewCategories');
-});
+Route::get('/addCategory', 'CategoriesController@getCategoriesSelect');
+
+Route::get('/viewCategories', 'CategoriesController@getCategoriesTreeList');
+
+Route::post('/contact/submit', 'CategoriesController@submit');

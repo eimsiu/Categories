@@ -10,9 +10,15 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-lg-10">
-            @include('inc.messages')
-            @yield('content')
+        <div class="col-md-6 col-lg-6">
+            <div class="well">
+                @yield('recursive')
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <div class="well">
+                @yield('iterative')
+            </div>
         </div>
     </div>
 </div>
