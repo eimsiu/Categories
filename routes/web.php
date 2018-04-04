@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/addCategory', function () {
+    return view('addCategory');
+});
+
+Route::get('/viewCategories', function () {
+    return view('viewCategories');
 });
